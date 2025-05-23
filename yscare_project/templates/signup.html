@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YS CARE - Sign Up</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="login-container">
+    <h2>SIGN UP</h2>
+    <form method="post" action="{% url 'users:signup' %}">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password1" placeholder="Password" required>
+      <input type="password" name="password2" placeholder="Confirm Password" required>
+      <button type="submit" class="login-btn">Sign Up</button>
+    </form>
+
+    <div class="divider">
+      <hr><span>OR</span><hr>
+    </div>
+
+    <div class="social-login">
+      <button class="social-btn apple-btn">
+        <img src="{% static 'img/apple-logo.png' %}" alt="Apple"> Sign up with Apple
+      </button>
+      <button class="social-btn google-btn">
+        <img src="{% static 'img/google-logo.png' %}" alt="Google"> Sign up with Google
+      </button>
+    </div>
+  </div>
+</body>
+</html>

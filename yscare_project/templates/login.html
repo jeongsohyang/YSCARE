@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YS CARE - Login</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="login-container">
+    <h2>YS CARE</h2>
+    <form method="post" action="{% url 'users:login' %}">>
+      {% csrf_token %}
+
+      {% if messages %}
+        {% for message in messages %}
+          <p style="color: red; text-align: center;">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+
+      <input type="text" name="username" placeholder="Username"><br>
+      <input type="password" name="password" placeholder="Password"><br>
+      <button type="submit" class="login-btn">Sign In</button>
+    </form>
+
+    <div class="divider">
+      <hr><span>OR</span><hr>
+    </div>
+
+    <div class="social-login">
+      <button class="social-btn apple-btn">
+        <img src="{% static 'img/apple-logo.png' %}" alt="Apple"> Sign in with Apple
+      </button>
+      <button class="social-btn google-btn">
+        <img src="{% static 'img/google-logo.png' %}" alt="Google"> Sign in with Google
+      </button>
+    </div>
+
+    <div class="sub-links">
+      <a href="{% url 'users:signup' %}">sign up</a> |
+      <a href="#">id</a>
+      <a href="#">pw</a>
+    </div>
+  </div>
+</body>
+</html>

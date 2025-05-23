@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>YS CARE - Main</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="layout">
+        <nav class="sidebar">
+          <h2>YS CARE</h2>
+        </nav>
+
+    <div class="main-content">
+      <div class="main-header">
+        <div class="user-profile">
+          <div class="profile-pic"></div>
+            <div cl ass="user-info">
+              <a href="{% url 'users:health_info' %}" style="text-decoration: none; color: inherit;">
+                <p><strong>{{ name }}</strong></p>
+                <p>{{ gender }} / {{ age }}세</p>
+              </a>
+            </div>
+        </div>
+      </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>steps</h3>
+        <p>{{ step_count|default:"—" }} steps</p>
+      </div>
+      <div class="card">
+        <h3>심박수</h3>
+        <p>{{ bpm|default:"—" }} BPM</p>
+      </div>
+      <div class="card">
+        <h3>수면시간</h3>
+        <p>{{ sleep_duration|default:"—" }} 분</p>
+      </div>
+      <div class="card">
+        <h3>혈당치</h3>
+        <p>{{ glucose_level|default:"—" }} mg/dL</p>
+      </div>
+    </div>
+</div＞
+</div>
+</body>
+</html>

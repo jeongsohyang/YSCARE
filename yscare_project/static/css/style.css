@@ -1,0 +1,269 @@
+button {
+  border-radius: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/*login*/
+.login-container {
+  width: 320px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b6de2;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.divider span {
+  margin: 0 10px;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.apple-btn img,
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.sub-links {
+  margin-top: 20px;
+  /* text-align: left; */
+  color: #999;
+  font-size: 0.9em;
+}
+
+.sub-links a {
+  color: #999;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.sub-links a:hover {
+  text-decoration: underline;
+}
+
+/*main*/
+.main-content {
+  flex: 1;
+  padding: 24px 40px; /* 좌우 패딩을 고정해서 user-profile과 카드 정렬 맞춤 */
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  background-color: #f5f9ff;
+  padding: 16px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sidebar-toggle {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* 메인 그리드 */
+.main-grid {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(2, 1fr); /* 2열 유지 */
+  gap: 32px;  /* ← 카드 간 간격 */
+  max-width: 800px;  /* ← 그리드 최대 너비 제한 */
+  margin: 40px auto;  /* ← 화면 가운데 정렬 + 위 여백 */
+  padding: 0 20px;  /* ← 양 옆 패딩 */
+}
+
+/* 카드 스타일 */
+.feature-card {
+  background-color: #e8eeff;
+  border-radius: 12px;
+  padding: 28px 0;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.form-container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-btn,
+.skip-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.skip-btn {
+  background-color: #aaa;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.divider span {
+  margin: 0 10px;
+  color: #999;
+  font-size: 14px;
+}
+
+/*메인-카드*/
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.card {
+  min-height: 120px;
+  padding: 24px 28px;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card.sleep { border-left: 6px solid #4e91f9; }
+.card.steps { border-left: 6px solid #f7b731; }
+.card.glucose { border-left: 6px solid #eb3b5a; }
+.card.bpm { border-left: 6px solid #20bf6b; }
+
+
+

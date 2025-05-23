@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>YS CARE - Health Info</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>건강 정보 입력</h2>
+    <form method="post">
+  {% csrf_token %}
+  {% if error %}
+    <p style="color:red">{{ error }}</p>
+  {% endif %}
+
+  <label>아이디: <input type="text" name="username" value="{{ username }}" readonly></label><br>
+  <label>이름: <input type="text" name="name" value="{{ name }}" readonly></label><br>
+  <label>비밀번호 변경: <input type="password" name="password1"></label><br>
+  <label>비밀번호 확인: <input type="password" name="password2"></label><br>
+  <label>키(cm): <input type="number" name="height" value="{{ height }}"></label><br>
+  <label>체중(kg): <input type="number" name="weight" value="{{ weight }}"></label><br>
+  <label>성별:
+    <select name="gender">
+      <option value="0" {% if gender == 0 %}selected{% endif %}>남성</option>
+      <option value="1" {% if gender == 1 %}selected{% endif %}>여성</option>
+    </select>
+  </label><br>
+  <label>나이: <input type="number" name="age" value="{{ age }}"></label><br>
+  <button type="submit">저장</button>
+</form>
+
+
+    <div class="divider">
+      <hr><span>또는</span><hr>
+    </div>
+
+    <form method="get" action="{% url 'users:main' %}">
+      <button type="submit" class="skip-btn">건너뛰기</button>
+    </form>
+  </div>
+</body>
+</html>
